@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -14,63 +15,91 @@ h1 {
   margin-top: 50px;
 }
 
-.button {
-  background-color: #4CAF50;
-  color: white;
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 0 10px;
   border: none;
   border-radius: 5px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 10px;
+  background-color: #0077cc;
+  color: #fff;
   cursor: pointer;
 }
 
-.timer {
-  text-align: center;
+input[type="text"] {
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #0077cc;
+  border-radius: 5px;
+}
+
+#competitive,
+#timed,
+#high-scores {
+  margin-top: 50px;
+}
+
+#competitive,
+#timed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#competitive-question,
+#timed-question {
   font-size: 24px;
-  margin-top: 50px;
+  margin: 50px 0;
 }
 
-.problem {
+#player-score,
+#computer-score {
+  font-size: 24px;
+}
+
+#timer {
+  font-size: 24px;
+  margin-bottom: 50px;
+}
+
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
   text-align: center;
-  margin-top: 50px;
 }
 
-.problem h2 {
-  font-size: 28px;
-}
-
-.problem p {
-  font-size: 36px;
+th {
+  background-color: #f2f2f2;
   font-weight: bold;
 }
 
-.answer {
-  text-align: center;
-  margin-top: 50px;
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
-.answer input {
-  font-size: 24px;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  margin-right: 10px;
+tr:hover {
+  background-color: #ddd;
 }
 
-.answer button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+button {
   font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0077cc;
+  color: #fff;
   cursor: pointer;
 }
 
+button:hover {
+  background-color: #005fa3;
+}
