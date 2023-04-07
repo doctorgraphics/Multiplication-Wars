@@ -18,5 +18,11 @@ function generateProblem() {
 
 // Start the game when the start button is clicked
 startButton.addEventListener('click', function() {
-  generateProblem();
+  console.log('Start button clicked'); // Check if event listener is working
+
+  if (problemContainer && feedbackContainer) {
+    generateProblem();
+  } else {
+    console.error('Error: Could not find problem or feedback container');
+  }
 });
