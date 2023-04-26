@@ -2,10 +2,63 @@
 <html>
   <head>
     <title>Multiplication Wars</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
-    <!-- HTML code here -->
+    <h1>Multiplication Wars</h1>
+    <div class="button-container">
+      <button onclick="showCompetitive()">Competitive Game</button>
+      <button onclick="showTimed()">Timed Game</button>
+      <button onclick="showHighScores()">High Scores</button>
+    </div>
+
+    <div id="competitive" style="display:none;">
+      <div id="player-score">Player: 0</div>
+      <div id="computer-score">Computer: 0</div>
+      <div id="competitive-question"></div>
+      <input type="text" id="competitive-answer">
+      <button onclick="checkCompetitiveAnswer()">Submit</button>
+    </div>
+
+    <div id="timed" style="display:none;">
+      <div id="timer"></div>
+      <div id="timed-question"></div>
+      <input type="text" id="timed-answer">
+      <button onclick="checkTimedAnswer()">Submit</button>
+    </div>
+
+    <div id="high-scores" style="display:none;">
+      <table>
+        <tr>
+          <th>Competitive Game</th>
+          <th>Timed Game</th>
+        </tr>
+        <tr>
+          <td>
+            <table>
+              <tr>
+                <th>Rank</th>
+                <th>Score</th>
+                <th>Date</th>
+              </tr>
+              <!-- Add JavaScript code to populate this table with competitive game scores -->
+            </table>
+          </td>
+          <td>
+            <table>
+              <tr>
+                <th>Rank</th>
+                <th>Score</th>
+                <th>Date</th>
+              </tr>
+              <!-- Add JavaScript code to populate this table with timed game scores -->
+            </table>
+          </td>
+        </tr>
+      </table>
+      <button onclick="goBack()">Go Back</button>
+    </div>
+
     <script src="timed-game.js"></script>
     <script src="competitive-game.js"></script>
     <script src="high-scores.js"></script>
